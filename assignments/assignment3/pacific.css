@@ -1,0 +1,167 @@
+/*
+ File: http://cs.uml.edu/~mquarati/assignments/assignment3/pacific.css
+ COMP.4610 Assignment 3: Style a Site with External CSS
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on September 20, 2020 at 12:00 PM
+ This file provides the styling for http://cs.uml.edu/~mquarati/assignments/assignment3/index.html
+*/
+
+/* Sets various elements to block display, provided by instructor */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/* Sets the background to the provided image, while still setting the color below the gradient as #00569f */
+body {
+    margin: auto;
+    background-image: url("ptrbackground.jpg");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    color: #666666;
+    background-color: #00569f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Some basic window width property changes per assignment specifications */
+#wrapper {
+    min-width: 600px;
+    height: 100%;
+    margin:auto;
+    width:80%;
+    background-color: #91C7E1;
+}
+
+/* Setting the nav window position to left hand side */
+#wrapper > nav {
+    padding:0px;
+    overflow:hidden;
+    width:175px;
+    float:left;
+}
+
+
+/* Setting some properties of the navbar container element */
+#wrapper > nav ul {
+    float: left;
+    font-size: 18px;
+    background-color: #91C7E1;
+    margin: auto;
+    padding: 20px;
+    width: auto;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+/* Setting some properties of each navbar link, mainly to remove decorations and change color */
+#wrapper > nav ul li a:link {
+    text-decoration: none;
+    color:#1d1a5c;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+/* Set navbar link color when visited */
+#wrapper > nav ul li a:visited {
+    color: #344873;
+}
+
+/* Set navbar link color when hovering over with cursor */
+#wrapper > nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+/* Sets the background of the header to the provided image
+   Additionally sets rest of header to solid color to preserve image ratio*/
+h1 {
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: #000032;
+    background-image: url("sunset.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+    font-size: 28px;
+}
+
+/* Sets header to desired color */
+.resort {
+    position: static;
+    color: #407cb1;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* Formatting to allow for navbar and proper content spacing */
+#content {
+    margin-left:200px;
+    padding-left:20px;
+    padding-top:20px;
+    background-color:white;
+	
+}
+
+/* Formatting to allow for the paragraph in content to display correctly with navbar */
+#content > p {
+    font-size: 16px;
+    margin:0px;
+    padding-bottom: 10px;
+    margin-right: 25px;
+}
+
+/* Formatting to allow for the ul in content to display correctly with navbar */
+#content > ul {
+	display: contents;
+    padding-left: 550px;
+    font-size: 16px;
+    margin-right: 25px;
+}
+
+/* Formatting to allow for the marker.gif image to replace the bullet points in the list and align with the paragraph above */
+#content > ul li {
+    list-style-position: inside;
+    list-style-image: url('marker.gif');
+    margin-left: 50px;
+    margin-right: 25px;
+}
+
+/* Formatting to allow for the image to display correctly */
+img {
+    padding-right: 20px;
+    float:left;
+}
+
+/* Formatting to allow for the header to display as shown in the output */
+h2 {
+    padding-bottom: 15px;
+    margin: 0;
+    color: #3998CA;
+    font-size: 24px;
+}
+
+/* Text selection */
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Formatting to allow for the contact area to display correctly with navbar */
+#contact {
+    font-size: 14px;
+    background-color: white;
+    padding-top: 15px;
+    color: #666666;
+}
+
+/* Formatting to allow for the footer area to display correctly with navbar */
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    margin-left: 200px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-style: italic;
+}

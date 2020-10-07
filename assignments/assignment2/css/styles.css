@@ -1,0 +1,295 @@
+/*
+ File: ~/public_html/assignments/assignment2/css/styles.css
+ COMP.4610 Assignment: Creating Your First Web Page
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on September 7, 2020 at 1:30 PM
+ This file provides the styling for index.html 
+*/
+
+body {                          /* Remove slight margin and set color */
+    padding: 0px;
+    margin: 0px;
+    background-color: #c4e3ff;
+}
+
+html {
+    scroll-behavior: smooth;    /* Change action of button/navbar link click */
+}
+
+a{
+    color: black;
+}
+
+a:link {
+    text-decoration: none;      /* Remove underlining links */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:hover {
+    color: white;
+}
+
+
+.navigationBar {                /* Styling for navigation bar */
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+header{                         /* Styling for header  */
+    background: #c4e3ff;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 17px;
+}
+
+
+hr {                            /* Styling horizontal line under name in Intro section */
+    position: relative;
+    border: none;
+    height: 2px;
+    width: 450px;
+    margin: auto;
+    background: #e0e0e0;
+}
+
+
+.button1 {                      /* Styling button on intro screen */
+
+    margin:0 auto;
+    display:block;
+    margin-top:100px;
+    background-color: #303438;
+    padding:20px;
+    font-size: 25px;
+    border-radius:50%;
+    color: #e0e0e0; 
+    border: 2px solid #c4e3ff;
+    outline: none;
+}
+
+.button1:hover {                /* Styling intro screen button when cursor hovers over it */
+    background-color: #c4e3ff;
+    transition-duration: 0.4s;
+    color: black;
+}
+
+.button2 {                      /* Styling all other buttons */
+    margin:0 auto;
+    display:block;
+    margin-top:100px;
+    background-color: #303438;
+    padding: 20px;
+    font-size: 22px;
+    color: #e0e0e0;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    outline: none;
+}
+
+.button2:hover {                /* Styling all other buttons when cursor hovers over them */
+	background-color: #c4e3ff;
+    transition-duration: 0.4s;
+    color: #303438;
+}
+
+
+.Intro > h1{                    /* Styling intro section */
+    font-size: 50px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.Intro > h4{
+    padding-top: 250px;
+    margin: 0px;
+}
+
+.Intro > p {
+    padding: 15px;
+    margin: 0px;
+    font-style:italic;
+}
+
+.Intro > ul {
+    list-style:none;
+    display:block; 
+    text-align:center;
+}
+
+.Intro {
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    height:100%;
+    width:100%;
+    text-align: center;
+    color: #e0e0e0;
+    background-color: #303438;
+}
+
+
+.Education {                    /* Styling Education section */
+    background-color: #e0e0e0;
+    margin: 25px; 
+    padding-bottom: 20px;
+}
+
+.Education > h2 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #303438;
+    color: #e0e0e0;
+}
+
+.Education > p {
+    color: black;
+    background-color: #e0e0e0;
+    padding: 0px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+.Experience {                   /* Styling Experience section */
+    background-color: #e0e0e0;
+    margin: 25px;
+    padding-bottom:20px;
+}
+
+.Experience > h2 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #303438;
+    color: #e0e0e0;
+}
+
+.Experience > ul {
+    color: black;
+    background-color: #e0e0e0;
+    margin: 0px;
+}
+
+.AboutMe {                      /*Styling AboutMe section */
+    background-color: #e0e0e0;
+    margin: 25px;
+    padding-bottom: 15px;
+}
+
+.AboutMe > h2 {
+    text-align: center;
+    margin: 10px;
+    background-color: #303438;
+    margin: 0px;
+    color: #e0e0e0;
+    padding: 15px;
+}
+
+
+.AboutMe > p {
+    color: black;
+    background-color: #e0e0e0;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+
+.Contact {                      /* Styling Contact Section */
+    background-color: #e0e0e0;
+    margin: 25px;
+    padding-bottom: 15px;
+}
+
+.Contact > h2 {
+    text-align: center;
+    background-color: #303438;
+    color: #e0e0e0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Contact > p {
+    color: black;
+    background-color: #e0e0e0;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+.Assignments {                  /* Styling Assignments Section */
+    background-color: #e0e0e0;
+    margin: 25px;
+    padding-bottom: 15px;
+}
+
+.Assignments > h2 {
+    text-align: center;
+    background-color: #303438;
+    color: #e0e0e0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Assignments > p {
+    color: black;
+    background-color: #e0e0e0;
+    padding: 0px;
+    padding-top: 25px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+.Assignments > ul {
+    color: black;
+    background-color: #e0e0e0;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    padding-bottom:300px;
+}
+
+
+.container {                    /* Creating containers for HW folder images/links/captions */
+    display:inline-block;
+    padding-right:25px;
+    background-color: #e0e0e0;
+    margin:0px;
+}
+
+
+.image1 {                       /* Setting opacity of null link image */
+    opacity: 0.5;
+    display: block;
+}
+
+.image {
+    display: block;
+}
+
+.caption {                     /* Styling captions of HW assignment images */
+    display: block;
+    width: 100%;
+    text-align: center;
+    list-style:none;
+    color:black;
+    background-color: #e0e0e0;
+    margin:0px;
+}
+
