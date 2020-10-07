@@ -1,0 +1,200 @@
+<!--
+ File: ~/public_html/index.html
+ COMP.4610 Assignment: Bootstrap
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on October 4, 2020 at 6:00 PM
+ This web page will display personal and professional information as part of the assignment specifications. It will serve
+ as a homepage for future assignments as well. Update includes bootstrap functionality.
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+         <!-- The css styling is stored in css/styles.css -->
+        <link rel="stylesheet" href="css/styles.css">                  
+        <title>Michael Quaratiello</title>
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+         <!-- First section and home page of webpage -->
+        <div class= "Intro" id="introSection">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a class="navbar-brand" href="https://www.linkedin.com/in/michael-quaratiello">Michael Quaratiello</a>
+                <!-- Collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                 <!-- Links of navbar -->
+                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                       <ul class="nav navbar-nav ml-auto">
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#introSection">Home</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#educationSection">Education</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#experienceSection">Experience</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#aboutMeSection">About Me</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#contactSection">Contact</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#assignmentsSection">Assignments</a>
+                             </li>
+                       </ul>
+                 </div>
+            </nav>
+            <h1>Michael Quaratiello</h1>
+            <hr>
+            <p>UMass Lowell Student and Digital Technology & Innovation Intern</p>
+            <!-- Button with smooth transition will lead users through webpage by section  -->
+            <button class="button1" onclick="window.location.href = '#educationSection';">Click for more!</button> 
+        </div>
+        <!-- Education section of webpage -->
+        <div class= "Education" id="educationSection">
+            <h2>Education</h2>
+            <!-- Education Images will resize to fit screen size using Bootstrap -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12 text-center mb-4">
+                        <img class="image" src="images/Cap.png" alt="FolderImage"/>
+                        <h3>University of Massachusetts Lowell</h3>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 text-center mb-4">
+                        <img class="image" src="images/Diploma.png" alt="FolderImage"/>
+                        <h3>Degree: Computer Science</h3>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 text-center mb-4">
+                        <img class="image" src="images/Star.png" alt="FolderImage"/>
+                        <h3>Dean's List, Commonwealth Honors</h3>
+                    </div>
+                    </div>
+                </div>
+            <button class="button2" onclick="window.location.href = '#experienceSection';">What about work?</button>
+        </div>
+        <!-- Experience section of webpage -->
+        <div class= "Experience" id="experienceSection">                
+            <h2>Experience</h2>
+                <ul>
+                    <!-- Experience Paragraphs will resize to fit screen size using Bootstrap -->
+                    <div class="row">
+                        <!-- Bootstrap resizing for Second Co-op -->
+                        <div class="col-lg-6 col-sm-12 mb-4">
+                            <h4>Raytheon Technologies</h4>
+                                <ul>
+                                    <li>Developed a C#/XAML WPF (Windows Presentation Foundation) desktop application (.NET) utilized in recording defects in the semiconductor manufacturing process</li>
+                                    <li>Performed actions on the Andover Omega™ Sensor temperature and humidity network to maintain and increase cybersecurity and decrease network vulnerabilities</li>
+                                    <li>Assisted with the transition to a more modernized method of data collection and data analytics</li>
+                                    <li>Installed and configured factory support hardware for various applications which required
+                                    scanning the hardware for network vulnerabilities and completing various other tasks to harden the device</li>
+                                </ul>
+                        </div>
+                        <!-- Bootstrap resizing for First Co-op -->
+                        <div class="col-lg-6 col-sm-12 mb-4">
+                            <h4>MKS Instruments</h4>
+                                <ul>
+                                    <li>Developed an application for generic automated regression testing of flow department units using
+                                    Robot Framework and Python reducing manual testing from two weeks to two hours of automated testing</li>
+                                    <li>Produced a Graphical User Interface created with Python and web testing with Selenium Library</li>
+                                    <li>Aided in firmware development (C development) and debugging for Flow Solutions products</li>
+                                    <li>Worked in a cross-functional team to produce reliable and innovative products </li>
+                                </ul>
+                        </div>
+
+
+                </ul>
+            <button class="button2" onclick="window.location.href = '#aboutMeSection';">Who am I?</button>
+        </div>
+        <!-- AboutMe section of webpage -->
+        <div class= "AboutMe" id="aboutMeSection">
+            <h2>About Me</h2>
+            <p>
+                <!-- Display LinkedIn profile picture with short description  -->
+                <img src="images/profile.jpg" width="203" height="304" alt="Profile" style="width:auto;">           
+            </p>
+            <p>Off-hours you will likely find me exercising, hiking, or keeping up with the latest technologies.</p>
+            <button class="button2" onclick="window.location.href = '#contactSection';">How can you reach me?</button>
+        </div>
+        <!-- Contact section of webpage -->
+        <div class= "Contact" id="contactSection">
+            <!-- Text will resize to fit screen size using media queries -->
+            <h2>Contact Information</h2>
+            <p>
+                For business inquiries or job opportunities, feel free to send me an email below or send me a message on LinkedIn!
+            </p>
+            <p>
+                Email: Michael_Quaratiello@student.uml.edu
+            </p>
+            <p>
+                <!--LinkedIn link -->
+                <a href="https://www.linkedin.com/in/michael-quaratiello/">https://www.linkedin.com/in/michael-quaratiello</a> 
+            </p>
+            <button class="button2" onclick="window.location.href = '#assignmentsSection';">COMP.4610 Work</button>
+        </div>
+        <!-- Assignments section of webpage -->
+        <div class= "Assignments" id="assignmentsSection">
+            <h2>Assignments</h2>
+            <p> Click on the folders below to follow the assignment links. <br/> Note: HW1 link will do nothing. HW4 will return this page.</p>
+            <!-- Assignment Images will resize to fit screen size using Bootstrap -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
+                        <!-- Null Link, wont return a new page -->
+                        <a href="#" onclick="return false">
+                            <img class="imageOpacity" src="images/FolderImage.png" alt="FolderImage"/>
+                        </a>
+                        <h3>HW1</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 text-center div-padding-fix mb-4">
+                        <!-- Will bring user to orginal HW2 webpage -->
+                        <a href="http://cs.uml.edu/~mquarati/assignments/assignment2/index.html">
+                            <img class="image" src="images/FolderImage.png" alt="FolderImage"/>
+                        </a>
+                        <h3>HW2</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
+                        <!-- Will bring user to orginal HW3 assignment -->
+                        <a href="http://cs.uml.edu/~mquarati/assignments/assignment3/index.html">
+                            <img class="image" src="images/FolderImage.png" alt="FolderImage"/>
+                        </a>
+                        <h3>HW3</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
+                        <!-- Will bring user to orginal HW2 assignment, HW2 with Bootstrap upgrades -->
+                        <a href="http://cs.uml.edu/~mquarati/">
+                            <img class="image" src="images/FolderImage.png" alt="FolderImage"/>
+                        </a>
+                      <h3>HW4</h3>
+                    </div>
+                </div>
+                <button class="button2" onclick="window.location.href = '#introSection';">Back to the top!</button>
+                <!-- Validation link -->
+                <p>                                                            
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                            alt="Valid CSS!" />
+                    </a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
