@@ -17,7 +17,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
          <!-- The css styling is stored in css/styles.css -->
-        <link rel="stylesheet" href="css/styles.css">                  
+        <link rel="stylesheet" href="css/styles.css">
         <title>Michael Quaratiello</title>
     </head>
     <body>
@@ -26,7 +26,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
          <!-- First section and home page of webpage -->
         <div class= "Intro" id="introSection">
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <span id="anchor1" class="anchor"></span>
+            <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark navbar-fixed-top">
                 <a class="navbar-brand" href="https://www.linkedin.com/in/michael-quaratiello">Michael Quaratiello</a>
                 <!-- Collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -60,7 +61,7 @@
             <hr>
             <p>UMass Lowell Student and Digital Technology & Innovation Intern</p>
             <!-- Button with smooth transition will lead users through webpage by section  -->
-            <button class="button1" onclick="window.location.href = '#educationSection';">Click for more!</button> 
+            <button class="button1" onclick="window.location.href = '#educationSection';">Click for more!</button>
         </div>
         <!-- Education section of webpage -->
         <div class= "Education" id="educationSection">
@@ -88,7 +89,7 @@
             <button class="button2" onclick="window.location.href = '#experienceSection';">What about work?</button>
         </div>
         <!-- Experience section of webpage -->
-        <div class= "Experience" id="experienceSection">                
+        <div class= "Experience" id="experienceSection">
             <h2>Experience</h2>
                 <ul>
                     <!-- Experience Paragraphs will resize to fit screen size using Bootstrap -->
@@ -125,7 +126,7 @@
             <h2>About Me</h2>
             <p>
                 <!-- Display LinkedIn profile picture with short description  -->
-                <img src="images/profile.jpg" width="203" height="304" alt="Profile" style="width:auto;">           
+                <img src="images/profile.jpg" class="rounded" width="203" height="304" alt="Profile" style="width:auto;">
             </p>
             <p>Off-hours you will likely find me exercising, hiking, or keeping up with the latest technologies.</p>
             <button class="button2" onclick="window.location.href = '#contactSection';">How can you reach me?</button>
@@ -142,7 +143,7 @@
             </p>
             <p>
                 <!--LinkedIn link -->
-                <a href="https://www.linkedin.com/in/michael-quaratiello/">https://www.linkedin.com/in/michael-quaratiello</a> 
+                <a href="https://www.linkedin.com/in/michael-quaratiello/">https://www.linkedin.com/in/michael-quaratiello</a>
             </p>
             <button class="button2" onclick="window.location.href = '#assignmentsSection';">COMP.4610 Work</button>
         </div>
@@ -187,7 +188,7 @@
                 </div>
                 <button class="button2" onclick="window.location.href = '#introSection';">Back to the top!</button>
                 <!-- Validation link -->
-                <p>                                                            
+                <p>
                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
                         <img style="border:0;width:88px;height:31px"
                             src="http://jigsaw.w3.org/css-validator/images/vcss-blue"

@@ -9,7 +9,7 @@
 */
 
 /* Remove slight margin and set color */
-body {                          
+body {
     padding: 0px;
     margin: 0px;
     background-color: #c4e3ff;
@@ -17,7 +17,7 @@ body {
 
 /* Change action of button/navbar link click */
 html {
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
 }
 
 a{
@@ -26,7 +26,7 @@ a{
 
 /* Remove underlining links */
 a:link {
-    text-decoration: none;      
+    text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -36,7 +36,7 @@ a:hover {
 }
 
 /* Styling for navigation bar */
-.navigationBar {                
+.navigationBar {
     float: right;
     color: #f2f2f2;
     text-align: center;
@@ -45,19 +45,19 @@ a:hover {
     font-size: 17px;
 }
 
-.navbar-brand {                 
+.navbar-brand {
     font-size: 16px;
 }
 
 /* media query for above to change text size */
-@media (min-width: 460px) {     
+@media (min-width: 460px) {
     .navbar-brand {
         font-size: 24px;
     }
 }
 
 /* Styling for header  */
-header{                         
+header{
     background: #c4e3ff;
     height: 50px;
     text-align: right;
@@ -66,7 +66,7 @@ header{
 }
 
 /* Styling horizontal line under name in Intro section */
-hr {                            
+hr {
     position: relative;
     border: none;
     height: 2px;
@@ -76,9 +76,9 @@ hr {
 }
 
 /* media query to change horizontal line size */
-@media (min-width: 460px) {         
+@media (min-width: 460px) {
     /* Styling horizontal line under name in Intro section */
-    hr {                            
+    hr {
         position: relative;
         border: none;
         height: 2px;
@@ -89,7 +89,7 @@ hr {
 }
 
 /* Styling button on intro screen */
-.button1 {                      
+.button1 {
     margin:0 auto;
     display:block;
     margin-top:20px;
@@ -103,15 +103,15 @@ hr {
 }
 
 /* Styling intro screen button when cursor hovers over it */
-.button1:hover {                
+.button1:hover {
     background-color: #c4e3ff;
     transition-duration: 0.4s;
     color: black;
 }
 
 /* Styling all other buttons */
-.button2 {                      
-    margin:0 auto;
+.button2 {
+    margin:25px auto;
     display:block;
     margin-top:20px;
     background-color: #303438;
@@ -124,14 +124,14 @@ hr {
 }
 
 /* Styling all other buttons when cursor hovers over them */
-.button2:hover {                
+.button2:hover {
     background-color: #c4e3ff;
     transition-duration: 0.4s;
     color: #303438;
 }
 
 /* Styling intro section */
-.Intro > h1{                    
+.Intro > h1{
     font-size: 50px;
     padding-top: 100px;
     padding-bottom: 10px;
@@ -171,6 +171,7 @@ hr {
 .Intro {
     min-height: 100vh;
     padding: 0px;
+    padding-top: 75px;
     margin: 0px;
     height:100%;
     width:100%;
@@ -182,10 +183,14 @@ hr {
 }
 
 /* Styling Education section */
-.Education {                    
+.Education {
     background-color: #e0e0e0;
     margin: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    padding-top: 85px;
+    margin-top: 0px;
+    background-clip:content-box;
 }
 
 .Education > h2 {
@@ -206,10 +211,14 @@ hr {
 }
 
 /* Styling Experience section */
-.Experience {                   
+.Experience {
     background-color: #e0e0e0;
     margin: 25px;
-    padding-bottom:20px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    padding-top: 85px;
+    margin-top: 0px;
+    background-clip:content-box;
 }
 
 .Experience > h2 {
@@ -237,10 +246,14 @@ h4 {
 }
 
 /*Styling AboutMe section */
-.AboutMe {                      
+.AboutMe {
     background-color: #e0e0e0;
     margin: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    padding-top: 85px;
+    margin-top: 0px;
+    background-clip:content-box;
 }
 
 .AboutMe > h2 {
@@ -265,10 +278,14 @@ h4 {
 }
 
 /* Styling Contact Section */
-.Contact {                      
+.Contact {
     background-color: #e0e0e0;
     margin: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    padding-top: 85px;
+    margin-top: 0px;
+    background-clip:content-box;
 }
 
 .Contact > h2 {
@@ -290,7 +307,7 @@ h4 {
 }
 
 /* media query to alter the contents of the Contact section */
-@media (min-width: 768px) {             
+@media (min-width: 768px) {
     .Contact > p {
         color: black;
         background-color: #e0e0e0;
@@ -302,10 +319,14 @@ h4 {
 }
 
 /* Styling Assignments Section */
-.Assignments {                  
+.Assignments {
     background-color: #e0e0e0;
     margin: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 85px;
+    padding-top: 85px;
+    margin-top: 0px;
+    background-clip:content-box;
 }
 
 .Assignments > h2 {
@@ -337,7 +358,7 @@ h4 {
 }
 
 /* Creating containers for HW folder images/links/captions */
-.container {                    
+.container {
     display:inline-block;
     padding-right:25px;
     background-color: #e0e0e0;
@@ -345,12 +366,12 @@ h4 {
 }
 
 /* Setting opacity of null link image */
-.imageOpacity {                       
+.imageOpacity {
     opacity: 0.5;
 }
 
 /* Styling captions of HW assignment images */
-.caption {                     
+.caption {
     display: block;
     width: 100%;
     text-align: center;
