@@ -1,0 +1,101 @@
+/*
+ File: https://mikeqrtll.github.io/assignments/assignment5/css/styles.css
+ COMP.4610 Assignment No. 5: Creating an Interactive Dynamic Table
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on October 25, 2020 at 7:00 PM
+ This file provides the styling for index.html.
+*/
+
+/* Setting background color to match website theme */
+html{
+    background-color: #c4e3ff;
+}
+
+/* Setting main body background color to match website theme */
+body{
+    background-color: #c4e3ff;
+}
+
+/* Cenetering text and setting color*/
+.container {
+    background-color: #c4e3ff;
+    text-align: center;
+}
+
+/* Placing the generated table in the center and setting max dimensions for presentation  */
+#multiplication_table {
+    margin: 0 auto;
+    overflow:auto;
+    max-height: 485px;
+    max-width: 100%;
+}
+
+/* Error text display red information to indicate what user should change about input */
+#errorMessage {
+    color: red;
+}
+
+/* Set the width of the first table to desired dimensions */
+table:first-child {
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 500px;
+    width:60%;
+}
+
+/* Set aspects of left column (row numbers) */
+table th {
+    background-color: black;
+    color: white;
+    position: sticky;
+}
+
+
+/* Set aspects of top row (column numbers) */
+table thead th {
+    background-color: black;
+    border-bottom: 2px solid black;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+    padding: 5px;
+}
+
+/* Top left corner of table to unique color */
+table thead th:first-child {
+    background-color: grey;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+}
+
+/* Aligning the top row border to the right border of the table */
+table thead th:last-child {
+    border-right: 2px solid black;
+    background-color: black;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+}
+
+/* Aligning the left column border to the bottom border of the table */
+table tbody th {
+    border-bottom: 2px solid black;
+    left: 0px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Set aspects of main cells of the generated table */
+td {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}

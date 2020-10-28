@@ -1,0 +1,72 @@
+<!--
+ File: https://mikeqrtll.github.io/assignments/assignment5/index.html
+ COMP.4610 Assignment No. 5: Creating an Interactive Dynamic Table
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on October 25, 2020 at 7:00 PM
+ This web page will display the contents of Assignment No.5: an error checking, dynamic multiplcation table based off user input using JavaScript.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Multiplication Table Generatior</title>
+    </head>
+    <body>
+        <!-- Container that holds the title, the form, and the generated table-->
+        <div class="container">
+            <h1>Multiplication Table Generator</h1>
+            <!--Contains the input form table-->
+            <div class="input">
+                <table>
+                    <!-- Minimum Column row with input field -->
+                    <tr>
+                        <td>Minimum Column Value</td>
+                        <td><input type="text" name="message" id="user_input1"></td>
+                    </tr>
+                    <!-- Maximum Column row with input field -->
+                    <tr>
+                        <td>Maximum Column Value </td>
+                        <td><input TYPE="text" name="email" id="user_input2"></td>
+                    </tr>
+                    <!-- Minimum Row row with input field -->
+                    <tr>
+                        <td>Minimum Row Value </td>
+                        <td><input type="text" name="message" id="user_input3"></td>
+                    </tr>
+                    <!-- Maximum Row row with input field -->
+                    <tr>
+                        <td>Maximum Row Value </td>
+                        <td><input TYPE="text" name="email" id="user_input4"></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Submit button creates table on click if possible -->
+            <p><br><input type="submit" value="Submit" name="Button1" onclick="formTable()"></p>
+            <!-- This portion is for when I was testing the input through JavaScript -->
+            <!--<label>Your input: </label>
+            <p><span id='display'></span></p>
+            <p><span id='display2'></span></p>
+            <p><span id='display3'></span></p>
+            <p><span id='display4'></span></p>-->
+
+            <!-- Creating a placeholder for the JavaScript code to display an error if present -->
+            <p><span id='errorMessage'></span></p>
+
+            <!-- Creating a placeholder for the JavaScriptcode to display the generated table -->
+            <div id="multiplication_table"></div>
+        </div>
+        <br><br>
+    <!-- Adding JavaScript here for optimal display times as discussed in class -->
+    <script src="js/table.js"></script>
+
+  </body>
+</html>
