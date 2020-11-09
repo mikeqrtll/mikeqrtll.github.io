@@ -76,7 +76,7 @@ function validate() {
           required: true,
           range: [-50, 50],
           integer: true,
-          rowMaxGreaterThanEqual: "#user_input1"
+          columnMaxGreaterThanEqual: "#user_input1"
       },
       user_input3: {
           required: true,
@@ -87,7 +87,7 @@ function validate() {
           required: true,
           range: [-50, 50],
           integer: true,
-          columnMaxGreaterThanEqual: "#user_input3"
+          rowMaxGreaterThanEqual: "#user_input3"
       }
     },
     //Broken rules custom messages
