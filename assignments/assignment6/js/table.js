@@ -23,7 +23,8 @@ function formTable() {
   var maxRowRaw = document.getElementById('user_input4').value;
 
   //initialize error string as empty
-  document.getElementById('errorMessage').innerHTML = "";
+  var errorMessage = document.getElementById('errorMessage');
+  errorMessage.textContent = "";
 
   minColumn = parseInt(minColumnRaw, 10);
   maxColumn = parseInt(maxColumnRaw, 10);
@@ -117,8 +118,10 @@ function validate() {
     
     //On invalid submit, reset previous error message and delete table
     invalidHandler: function() {
-        document.getElementById('errorMessage').innerHTML = "";
-        document.getElementById('multiplication_table').innerHTML = "";
+        var errorMessage = document.getElementById('errorMessage');
+        errorMessage.textContent = "";
+        var multiplication_table = document.getElementById('multiplication_table');
+        multiplication_table.textContent = "";
     },
 
     //Place error after the element where the error occurs: https://stackoverflow.com/questions/6545964/jquery-validation-error-placement
