@@ -1,0 +1,102 @@
+<!--
+ File: https://mikeqrtll.github.io/assignments/assignment7/index.html
+ COMP.4610 Assignment No. 7: Using the jQuery UI Slider and Tab Widgets
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on November 20, 2020 at 6:00 PM
+ This web page will display the contents of Assignment No.7: an error checking, dynamic multiplcation table based off user input using JavaScript/jQuery validation plugin.
+ Newly included features are tabs and jQuery UI sliders for input.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- CSS for jQuery UI -->
+        <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <title>Multiplication Table Generator</title>
+    </head>
+<body>
+    <!-- Container that holds the title, the form, and the generated table-->
+    <div class="container">
+        <h1>Multiplication Table Generator</h1>
+            <!--Contains the input form table-->
+            <div class="input">
+                <form id="input_form" name="input_form" method="GET">
+                <!-- Minimum Column row with input field -->
+                <div>
+                    <label>Minimum Column Value: </label>
+                    <input type="number" id="user_input1" name="user_input1">
+                    <div id = "slider_input1"></div>
+                </div>
+                
+                <!-- Maximum Column row with input field -->
+                <div>
+                    <label>Maximum Column Value: </label>
+                    <input type="number" id="user_input2" name="user_input2">
+                    <div id = "slider_input2"></div>
+                </div>
+                
+                <!-- Minimum Row row with input field -->
+                <div>
+                    <label>Minimum Row Value: </label>
+                    <input type="number" id="user_input3" name="user_input3">
+                    <div id = "slider_input3"></div>
+                </div>
+                
+                <!-- Maximum Row row with input field -->
+                <div>
+                  <label>Maximum Row Value: </label>
+                  <input type="number" id="user_input4" name="user_input4">
+                  <div id = "slider_input4"></div>
+                </div>
+                <br>
+                <!-- Submit button creates table on click if possible -->
+                <input id="Submit" class="Submit" type="submit" value="Save">
+               </form>
+               
+              <!-- Creating a placeholder for the JavaScript code to display an error if present -->
+              <p><span id='errorMessage'></span></p>
+            </div>
+        <!-- Set up a region for saved tables/tabs -->
+        <div id="tabs"> 
+            <h5> Saved Tables </h5>
+            <!-- Delete tables that are checked -->
+            <button  id="delete" onclick="deleteTable()">Delete Selected Table(s)</button>
+            <!-- Check all tables -->
+            <button  id="select" onclick="selectAll()">Select All</button>
+            <!-- Uncheck all tables -->
+            <button  id="unselected" onclick="unselectAll()">Unselect All</button>
+            <ul> 
+            </ul> 
+        </div> 
+    </div>
+    <!-- jQuery/jQuery Validation/jQuery UI plugin/source files -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>    <!-- Adding JavaScript here for optimal display times as discussed in class -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/table.js"></script>
+
+    <!-- Auto-validate form -->
+    <!-- Initialize active tabs to zero, validates text input, slider input, and runs nonessential updateMessage function -->
+    <script>
+      $( document ).ready(function() {
+        $("#tabs").tabs({ 
+                    active: 0 
+                }) 
+          validate();
+          validateSlider();
+          updateMessage();
+      });
+    </script>
+
+</body>
+</html>

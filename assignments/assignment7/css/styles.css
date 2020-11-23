@@ -1,0 +1,165 @@
+/*
+ File: https://mikeqrtll.github.io/assignments/assignment7/css/styles.css
+ COMP.4610 Assignment No. 7: Using the jQuery UI Slider and Tab Widgets
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on November 20, 2020 at 6:00 PM
+ This file provides the styling for index.html.
+*/
+
+/* Setting background color to match website theme */
+html{
+    background-color: #c4e3ff;
+}
+
+/* Setting main body background color to match website theme */
+body{
+    background-color: #c4e3ff;
+}
+
+/* Centering text and setting color*/
+.container {
+    background-color: #c4e3ff;
+    text-align: center;
+    align-items: center;
+}
+
+/*Some slight formating to labels of table */
+label{
+    width: 250px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/* Error text display red information to indicate what user should change about input */
+#errorMessage {
+    color: red;
+}
+
+/* Error text display red information to indicate what user should change about input */
+p {
+    color: red;
+}
+
+/* Set the width of the first table to desired dimensions */
+div table:first-child {
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 60%;
+}
+
+/* Set aspects of left column (row numbers) */
+table th {
+    background-color: black;
+    color: white;
+    position: sticky;
+}
+
+/* Set aspects of top row (column numbers) */
+table thead th {
+    background-color: black;
+    border-bottom: 2px solid black;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+    padding: 5px;
+}
+
+/* Top left corner of table to unique color */
+table thead th:first-child {
+    background-color: grey;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+}
+
+/* Aligning the top row border to the right border of the table */
+table thead th:last-child {
+    border-right: 2px solid black;
+    background-color: black;
+    z-index: 1;
+    text-align: center;
+    min-width: 40px;
+    top: 0px;
+}
+
+/* Aligning the left column border to the bottom border of the table */
+table tbody th {
+    border-bottom: 2px solid black;
+    left: 0px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Set aspects of main cells of the generated table */
+td {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+/* Set slider margin */
+#slider_input1 {
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+/* Set slider margin */
+#slider_input2 {
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+/* Set slider margin */
+#slider_input3 {
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+/* Set slider margin */
+#slider_input4 {
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+/* Placing the generated table in the center and setting max dimensions for presentation  */
+#multiplication_table {
+    margin: 0 auto;
+    overflow: auto;
+    max-height: 450px;
+    max-width: 100%;
+}
+
+/* Class that applies the format above to every saved tab  */
+.tableFormat {
+    margin: 0 auto;
+    overflow: auto;
+    max-height: 450px;
+    max-width: 100%;
+}
+
+/* Set attributes of the checkboxes for tabs */
+.checkbox{
+    padding-top: 0px;
+    margin: 5px;
+    margin-top: 0px;
+}
+
+/* Set attributes of the Saved Tables header */
+h5{
+    position: sticky;
+    margin: 5px;
+    text-align: center;
+    padding: 0px;
+}
+
+/* Add a small margin under a button */
+button{
+    margin-bottom: 5px;
+}
