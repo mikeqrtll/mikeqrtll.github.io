@@ -64,7 +64,7 @@ function formTable() {
         }
         content += "</tbody>";
         //Create tab header with described labels
-        $("#tabs ul").append("<li id=\"head"+ tabCounter +"\"><a href='#tab" + tabCounter + "'>"+ minColumn +" to "+ maxColumn +" by " + minRow + " by " + maxRow + " </a><input id = \"checkbox"+ tabCounter +"\" class = \"checkbox\" type=\"checkbox\"></li>");
+        $("#tabs ul").append("<li id=\"head"+ tabCounter +"\"><a href='#tab" + tabCounter + "'>"+ minColumn +" to "+ maxColumn +" by " + minRow + " to " + maxRow + " </a><input id = \"checkbox"+ tabCounter +"\" class = \"checkbox\" type=\"checkbox\"></li>");
         //Create tab content portion placeholder
         $("#tabs").append("<div id='tab" + tabCounter + "'><div id=\"multiplication_table"+ tabCounter +"\"class = \"tableFormat\"></div></div>");
         //Refresh, see https://api.jqueryui.com/tabs/#method-refresh for more details
