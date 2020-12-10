@@ -62,8 +62,9 @@ var score = 0;
 //Dropped in acceptable area flag
 var flag = 0;
 
-//Current slot of board, used to make sure future drops are to the right of most recently place tile
-CurrentSlot = 1;
+//Current slot of board, used to keep track of acceptable slots
+CurrentSlotRight = 4;
+CurrentSlotLeft = 4;
 
 //Used in calculating bonus tiles
 var tripleWordFactor = 0;
@@ -82,27 +83,48 @@ function createDroppablesDraggables() {
         snapTolerance:30,
         //Defines what constitutes a revert
         revert: function No(event, ui) {
-            //If dropped in an acceptable area, dont revert
+            //If dropped to right or on center, dont revert
             if(flag == 1)
             {
+                if(CurrentSlotRight == 4 && CurrentSlotLeft == 4)
+                {
+                    //First block message fault
+                    CurrentSlotLeft--;
+                }
                 //reset flag
                 flag = 0;
                 //Increment where next acceptable area is
-                CurrentSlot++;
+                CurrentSlotRight++;
+                messageDisplay.textContent = "";
+                //Don't revert
+                return false;
+            }
+            //If added to left
+            else if (flag == 2)
+            {
+                if(CurrentSlotLeft == 4 && CurrentSlotRight == 4)
+                {
+                    //First block message fault
+                    CurrentSlotRight++;
+                }
+                //reset flag
+                flag = 0;
+                //Decrement where next acceptable area is
+                CurrentSlotLeft--;
                 messageDisplay.textContent = "";
                 //Don't revert
                 return false;
             }
             else{
                 //revert
-                if(CurrentSlot == 1)
+                if(CurrentSlotRight == 4)
                 {
                     //First block message fault
                     messageDisplay.textContent = "Please drag the first block to the center tile, indicated by the star!";
                 }
                 else{
                     //Rest of messages
-                    messageDisplay.textContent = "Please drag your next block directly to the right of the most recently placed block!";
+                    messageDisplay.textContent = "Please drag your next block directly next to another letter!";
                 }
                 return true;
             }
@@ -123,8 +145,9 @@ function createDroppablesDraggables() {
             //Get class for multiplication reasons
             var boardTileClass = $(this).attr("class");
             var firstClass = boardTileClass.split(" ")[0];
-            //If drop was in desired location for current status continue
-            if(number == CurrentSlot)
+            console.log("CurrentSlotLeft: " + CurrentSlotLeft + " CurrentSlotRight: " + CurrentSlotRight);
+            //If drop was center slot or right of last tile
+            if(number == CurrentSlotRight)
             {
                 //If dropping a blank tile, get value and ensure its a valid entry
                 if(letter == "_")
@@ -182,7 +205,75 @@ function createDroppablesDraggables() {
                         }
                     }
                   }
+                  console.log("Pushing");
                   word.push(letter);
+                  console.log(word);
+                  //Lock in valid entry and disable draggability
+                  ui.draggable.draggable( 'disable' )
+                  //display score
+                  scoreDisplay.textContent = score;
+            }
+            //If added to left
+            if(number == CurrentSlotLeft && CurrentSlotLeft != CurrentSlotRight)
+            {
+                //If dropping a blank tile, get value and ensure its a valid entry
+                if(letter == "_")
+                {
+                    choice = prompt("Please enter value you would like to fill the blank tile with!");
+                    //console.log("LOG: " +choice);
+                    //Regex for one letter and not null and then create tile with that letter
+                    if(choice != null && /^[A-Z]$/i.test(choice))
+                    {
+                        ui.draggable.prop('src',"graphics_data/Scrabble_Tiles/Scrabble_Tile_"+choice.toUpperCase()+".jpg");
+                        letter = choice.toUpperCase();
+                    }
+                    //If bad entry revert
+                    else {
+                        return false;
+                    }
+                }
+                //Valid drop flag set
+                flag = 2;
+                validString.textContent = ""
+                console.log("Tile dropped: "+ letter + " Board Tile: " + number);
+                //Start the calculation process
+                for (var i = 0; i < ScrabbleTiles.length; i++){
+                    //Get letter dropped letter object
+                    if (ScrabbleTiles[i].letter == letter){
+                        //If triple word tile reached, triple score, taking into consideration other multipliers
+                        if(firstClass === "tripleWordTile")
+                        {
+                            tripleWordFactor++;
+                            //console.log(ScrabbleTiles[i].value)
+                            score = score * 3 + ScrabbleTiles[i].value  * Math.pow(3, tripleWordFactor) * Math.pow(2, doubleWordFactor);
+
+                        }
+                        //If triple letter tile reached, triple letter, taking into consideration other multipliers
+                        else if (firstClass === "tripleLetterTile")
+                        {
+                           score = score + ScrabbleTiles[i].value * 3  * Math.pow(3, tripleWordFactor) * Math.pow(2, doubleWordFactor);
+                        }
+                        //If double word tile reached, double word, taking into consideration other multipliers
+                        else if (firstClass === "doubleWordTile")
+                        {
+                            doubleWordFactor++;
+                            //console.log(ScrabbleTiles[i].value)
+                            score = score * 2 + ScrabbleTiles[i].value  * Math.pow(3, tripleWordFactor) * Math.pow(2, doubleWordFactor);    
+                        }
+                        //If double letter tile reached, double letter, taking into consideration other multipliers
+                        else if (firstClass === "doubleLetterTile")
+                        {
+                            score = score + ScrabbleTiles[i].value * 2  * Math.pow(3, tripleWordFactor) * Math.pow(2, doubleWordFactor);
+                        }
+                        //If no bonus, just add letter value, taking into consideration other multipliers
+                        else
+                        {
+                            score += ScrabbleTiles[i].value * Math.pow(3, tripleWordFactor) * Math.pow(2, doubleWordFactor);
+                        }
+                    }
+                  }
+                  console.log("Unshifting");
+                  word.unshift(letter);
                   console.log(word);
                   //Lock in valid entry and disable draggability
                   ui.draggable.draggable( 'disable' )
@@ -242,10 +333,10 @@ function createTable() {
     var content = "";
     content +="<table>";
     content+="<tr>"
-    content+="<td id=\"1\" class=\"centerTile board_tiles\"></td>"
-    content+="<td id=\"2\" class=\"board_tiles\"></td>"
-    content+="<td id=\"3\" class=\"doubleLetterTile board_tiles\"></td>"
-    content+="<td id=\"4\" class=\"doubleWordTile board_tiles\"></td>"
+    content+="<td id=\"1\" class=\"doubleWordTile board_tiles\"></td>"
+    content+="<td id=\"2\" class=\"doubleLetterTile board_tiles\"></td>"
+    content+="<td id=\"3\" class=\"board_tiles\"></td>"
+    content+="<td id=\"4\" class=\"centerTile board_tiles\"></td>"
     content+="<td id=\"5\" class=\"board_tiles\"></td>"
     content+="<td id=\"6\" class=\"tripleLetterTile board_tiles\"></td>"
     content+="<td id=\"7\" class=\"tripleWordTile board_tiles\"></td>"
@@ -314,7 +405,8 @@ function submitCurrentWord() {
     flag = 0;
     tripleWordFactor = 0;
     doubleWordFactor = 0;
-    CurrentSlot = 1;
+    CurrentSlotRight = 4;
+    CurrentSlotLeft = 4;
     TotalScore += score;
     totalScoreDisplay.textContent = TotalScore;
     //console.log("TOTAL SCORE: " +TotalScore);
@@ -353,7 +445,8 @@ function restartGame(){
     flag = 0;
     tripleWordFactor = 0;
     doubleWordFactor = 0;
-    CurrentSlot = 1;
+    CurrentSlotRight = 4;
+    CurrentSlotLeft = 4;
     totalScoreDisplay.textContent = 0;
     TotalScore = 0;
     score = 0;
@@ -391,7 +484,8 @@ function returnTilesToRack(){
     //Reset score for current round and place current slot back to one, reset multipliers and notify user
     score = 0;
     scoreDisplay.textContent = 0;
-    CurrentSlot = 1;
+    CurrentSlotRight = 4;
+    CurrentSlotLeft = 4;
     tripleWordFactor = 0;
     doubleWordFactor = 0;
     word = [];
@@ -445,7 +539,8 @@ function swapTiles(){
     //Reset round variables
     score = 0;
     scoreDisplay.textContent = 0;
-    CurrentSlot = 1;
+    CurrentSlotRight = 4;
+    CurrentSlotLeft = 4;
     tripleWordFactor = 0;
     doubleWordFactor = 0;
     createDroppablesDraggables();

@@ -11,5 +11,5 @@ acceptable locations on the board, submitting a word for a score, tallying
 scores of multiple rounds, bonus tiles, restarting the game, returning placed 
 tiles to the rack and swapping out current tiles for new ones. All these 
 operation keep track of the game score and the number-remaing of each type 
-of tile. My implementation checks entries against a dictionary and is a single 
+of tile. My implementation check entries against a dictionary and is a single 
 line implementation (does not implement full board).
