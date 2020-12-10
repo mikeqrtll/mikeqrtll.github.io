@@ -1,0 +1,156 @@
+/*
+ File: https://mikeqrtll.github.io/assignments/assignment8/css/styles.css
+ COMP.4610 Assignment No. 8: Implementing a Bit of Scrabble with Drag-and-Drop
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on December 4, 2020 at 6:00 PM
+ This file provides the styling for index.html.
+*/
+
+/* Setting background color to match website theme */
+html{
+    background-color: #c4e3ff;
+}
+
+/* Setting main body background color to match website theme */
+body{
+    background-color: #c4e3ff;
+}
+
+/* https://jqueryui.com/draggable/ */
+.draggable{ 
+    width: 50px; 
+    height: 50px; 
+    padding: 0.5em; 
+    background-color: white;
+    margin:0px;
+}
+
+/* Setting characteristics of paragraph, used for messages to users */
+p{
+    display: inline;
+}
+
+/* Centering H1 */
+h1{
+    text-align: center;
+}
+
+/* Centering H5 (Total Score) */
+h5{
+    text-align: center;
+    display: inline
+}
+
+/* Centering buttons at bottom */
+button{
+    text-align: center;
+}
+
+/* Centering board */
+table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Setting characteristics of a table cell */
+td{
+    background-color: #cac3a5;
+    background-image: url("../graphics_data/Scrable_Tile_No_Bonus.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    min-height: 46px;
+    min-width: 46px;
+    height: 46px;
+    width: 46px;
+    border: 4px solid white;
+}
+
+/* Seeting background of the triple word tile */
+.tripleWordTile{
+    background-color: #fa6854;
+    background-image: url("../graphics_data/Scrable_Tile_Triple_Word_Bonus.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+/* Setting background of the double letter tile */
+.doubleLetterTile{
+    background-color: #c4dad9;
+    background-image: url("../graphics_data/Scrable_Tile_Double_Letter_Bonus.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+/* Setting background of the triple letter tile */
+.tripleLetterTile{
+    background-color: #399cb8;
+    background-image: url("../graphics_data/Scrable_Tile_Triple_Letter_Bonus.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+/* Setting background of the double word tile */
+.doubleWordTile{
+    background-color :#f4b5a5;
+    background-image: url("../graphics_data/Scrable_Tile_Double_Word_Bonus.jpg");
+    background-repeat: no-repeat;
+    background-size: 45px 40px;
+}
+
+/* Setting background of the center tile */
+.centerTile{
+    background-color: #f4b5a5;
+    background-image: url("../graphics_data/Scrable_Tile_Center.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+/* Increasing divs margin for spacing reasons */
+div {
+    margin: 10px;
+    text-align: center;
+}
+
+#invalidWord {
+    color: blue;
+    display: block;
+    height: 50px;
+    min-height: 50px;
+    text-align: center;
+}
+
+/* Creating div for entire page for centering */
+#container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Setting up the rack that will hold tiles */
+#rack{
+    height: 100px;
+    width:475px;
+    background-image: url("../graphics_data/scrabble-tile-holder-406774_640.png");
+    background-repeat: no-repeat;
+    background-size: 475px 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Setting tile attributes */
+img {
+    margin: 0 auto;
+    align-self: center;
+    height: 45px;
+    width:45px;
+    margin: 5px;
+}

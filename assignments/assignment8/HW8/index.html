@@ -1,0 +1,79 @@
+<!--
+ File: https://mikeqrtll.github.io/assignments/assignment8/index.html
+ COMP.4610 Assignment No. 8: Implementing a Bit of Scrabble with Drag-and-Drop
+ Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ Created by Michael Quaratiello on December 4, 2020 at 6:00 PM
+ This webpage depicts a one line scrabble board with drag and drop capabilities
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- CSS for jQuery UI -->
+        <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <title>Scrabble</title>
+    </head>
+<body>
+    <div class = "container">
+        <div>
+            <h1>A Bit of Scrabble</h1>
+            <!-- Display total score -->
+            <h5>Total Score: </h5>
+            <!-- total game score placeholder -->
+            <h5 id="totalScore"></h5>
+            <br>
+            <!-- Display Round Score -->
+            <p>Current Round Score: </p>
+            <!-- total round score placeholder -->
+            <p id="Score"></p>
+            <br><br>
+            <div id="invalidWord">
+                <h5 id="validStr"></h5>
+            </div>
+            
+        </div>
+        
+        <!-- scrabble board placeholder -->
+        <div id = "board"></div>
+
+        <!-- tile rack placeholder -->
+        <div id="rack"></div>
+        
+        <!-- Various buttons for different functions -->
+        <button  id="Submit" onclick="submitCurrentWord()">Submit Current Word</button>
+        <button  id="CallBackTiles" onclick="returnTilesToRack()">Return Tiles To Rack</button>
+        <button  id="Swap Tiles" onclick="swapTiles()">Swap Tiles</button>
+        <button  id="Restart" onclick="restartGame()">Restart Game</button>
+        <br>
+
+        <!-- Message placeholder for various errors and to notify user of any updates -->
+        <p id="message"></p>
+
+        <!-- jQuery/jQuery Validation/jQuery UI plugin/JS source files -->
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="dict/words.js"></script>
+        <script src="js/scrabble.js"></script>
+        
+
+        <!-- Generate board and droppables, initialize variables -->
+        <script>
+        $( document ).ready(function() {
+                generateBoard();
+                
+        });
+        </script>
+    </div>
+</body>
+</html>
