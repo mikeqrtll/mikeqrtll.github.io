@@ -1,366 +1,449 @@
 /*
- File: https://mikeqrtll.github.io/css/styles.css
- COMP.4610 Assignment: Bootstrap
- Michael Quaratiello, UMass Lowell Computer Science Student enrolled in COMP.4610 (Formerly 91.61 GUI Programming I), Michael_Quaratiello@student.uml.edu
+ File: https://mikeqrtll.github.io/css/styles.cs
+ Michael Quaratiello
  Copyright (c) 2020 by Michael Quaratiello. All rights reserved. May be
  freely copied or excerpted for educational purposes with credit to the author.
- Created by Michael Quaratiello on October 4, 2020 at 6:00 PM
- This file provides the styling for index.html. Update includes media queries.
 */
 
 /* Remove slight margin and set color */
 body {
-    padding: 0px;
-    margin: 0px;
-    background-color: #c4e3ff;
+  padding: 0px;
+  margin: 0px;
+  background-color: #343a40!important;
+}
+
+body {
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 15rem rgba(0, 0, 0, .75);
 }
 
 /* Change action of button/navbar link click */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 a{
-    color: black;
+  color: black;
 }
 
 /* Remove underlining links */
 a:link {
-    text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 a:hover {
-    color: white;
+  color: white;
 }
 
 /* Styling for navigation bar */
 .navigationBar {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 10px;
-    text-decoration: none;
-    font-size: 17px;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .navbar-brand {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* media query for above to change text size */
 @media (min-width: 460px) {
-    .navbar-brand {
-        font-size: 24px;
-    }
+  .navbar-brand {
+      font-size: 24px;
+  }
 }
 
 /* Styling for header  */
 header{
-    background: #c4e3ff;
-    height: 50px;
-    text-align: right;
-    padding-right: 10px;
-    font-size: 17px;
+  height: 50px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 17px;
 }
 
 /* Styling horizontal line under name in Intro section */
 hr {
-    position: relative;
-    border: none;
-    height: 2px;
-    width: 200px;
-    margin: auto;
-    background: #e0e0e0;
+  position: relative;
+  border: none;
+  height: 2px;
+  width: 200px;
+  margin: auto;
+  background: #e0e0e0;
 }
 
 /* media query to change horizontal line size */
 @media (min-width: 460px) {
-    /* Styling horizontal line under name in Intro section */
-    hr {
-        position: relative;
-        border: none;
-        height: 2px;
-        width: 450px;
-        margin: auto;
-        background: #e0e0e0;
-    }
+  /* Styling horizontal line under name in Intro section */
+  hr {
+      position: relative;
+      border: none;
+      height: 2px;
+      width: 450px;
+      margin: auto;
+      background: #e0e0e0;
+  }
 }
 
 /* Styling button on intro screen */
 .button1 {
-    margin:0 auto;
-    display:block;
-    margin-top:20px;
-    background-color: #303438;
-    padding:20px;
-    font-size: 25px;
-    border-radius:50%;
-    color: #e0e0e0;
-    border: 2px solid #c4e3ff;
-    outline: none;
+  margin:0 auto;
+  display:block;
+  margin-top:20px;
+  background-color: #303438;
+  padding:20px;
+  font-size: 25px;
+  border-radius:50%;
+  color: #e0e0e0;
+  border: 2px solid #eef1f5!important;
+  outline: none;
 }
 
 /* Styling intro screen button when cursor hovers over it */
 .button1:hover {
-    background-color: #c4e3ff;
-    transition-duration: 0.4s;
-    color: black;
+  background-color: #343a40!important;
+  transition-duration: 0.4s;
+  color: black;
 }
 
 /* Styling all other buttons */
 .button2 {
-    margin:25px auto;
-    display:block;
-    margin-top:20px;
-    background-color: #303438;
-    padding: 20px;
-    font-size: 22px;
-    color: #e0e0e0;
-    border-radius: 50%;
-    border: 2px solid #e0e0e0;
-    outline: none;
+  margin:25px auto;
+  display:block;
+  margin-top:20px;
+  background-color: #303438;
+  padding: 20px;
+  font-size: 22px;
+  color: #e0e0e0;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  outline: none;
 }
 
 /* Styling all other buttons when cursor hovers over them */
 .button2:hover {
-    background-color: #c4e3ff;
-    transition-duration: 0.4s;
-    color: #303438;
+  background-color: #343a40!important;
+  transition-duration: 0.4s;
+  color: #303438;
 }
 
 /* Styling intro section */
 .Intro > h1{
-    font-size: 50px;
-    padding-top: 100px;
-    padding-bottom: 10px;
-    margin: 0;
-    font-weight: bold;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  font-size: 50px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+h3 {
+  color: #303438;
 }
 
 .Intro > h4{
-    padding-top: 250px;
-    margin: 0px;
+  padding-top: 250px;
+  margin: 0px;
 }
 
 /* Bottom portion adds shadow to intro to lower portion of intro */
 .Intro > p {
-    padding: 15px;
-    margin: 0px;
-    font-style:italic;
-    font-weight: bold;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  padding: 15px;
+  margin: 0px;
+  font-style:italic;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .Intro > ul {
-    list-style:none;
-    display:block;
-    text-align:center;
+  list-style:none;
+  display:block;
+  text-align:center;
 }
 
 .Intro {
-    min-height: 100vh;
-    padding: 0px;
-    padding-top: 75px;
-    margin: 0px;
-    height:100%;
-    width:100%;
-    text-align: center;
-    color: #e0e0e0;
-    background-image: url("../images/mountains.jpg");
-    background-size: cover;
-
+  min-height: 100vh;
+  padding: 0px;
+  padding-top: 75px;
+  margin: 0px;
+  height:100%;
+  width:100%;
+  text-align: center;
+  color: #e0e0e0;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Styling Education section */
 .Education {
-    background-color: #e0e0e0;
-    margin: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 1px;
-    padding-top: 85px;
-    margin-top: 0px;
-    background-clip:content-box;
+  background-color: #e0e0e0;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 1px;
+  padding-top: 85px;
+  margin-top: 0px;
+  background-clip:content-box;
 }
 
 .Education > h2 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #303438;
-    color: #e0e0e0;
-    font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #303438;
+  color: #e0e0e0;
+  font-size: 30px;
 }
 
 .Education > p {
-    color: black;
-    background-color: #e0e0e0;
-    padding: 0px;
-    padding-left: 20px;
-    margin: 0;
+  color: black;
+  background-color: #e0e0e0;
+  padding: 0px;
+  padding-left: 20px;
+  margin: 0;
 }
 
 /* Styling Experience section */
 .Experience {
-    background-color: #e0e0e0;
-    margin: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 1px;
-    padding-top: 85px;
-    margin-top: 0px;
-    background-clip:content-box;
+  background-color: #e0e0e0;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 1px;
+  padding-top: 85px;
+  margin-top: 0px;
+  background-clip:content-box;
 }
 
 .Experience > h2 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #303438;
-    color: #e0e0e0;
-    font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #303438;
+  color: #e0e0e0;
+  font-size: 30px;
 }
 
 h4 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-right: 10px;
-    color: #303438;
-    font-size: 25px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 10px;
+  color: #303438;
+  font-size: 25px;
 }
 
 .Experience > ul {
-    color: black;
-    background-color: #e0e0e0;
-    margin-right: 40px;
+  color: black;
+  background-color: #e0e0e0;
+  margin-right: 40px;
 }
 
 /*Styling AboutMe section */
 .AboutMe {
-    background-color: #e0e0e0;
-    margin: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 1px;
-    padding-top: 85px;
-    margin-top: 0px;
-    background-clip:content-box;
+  background-color: #e0e0e0;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 1px;
+  padding-top: 85px;
+  margin-top: 0px;
+  background-clip:content-box;
 }
 
 .AboutMe > h2 {
-    text-align: center;
-    margin: 10px;
-    background-color: #303438;
-    margin: 0px;
-    color: #e0e0e0;
-    padding: 15px;
-    font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  background-color: #303438;
+  margin: 0px;
+  color: #e0e0e0;
+  padding: 15px;
+  font-size: 30px;
 }
 
 
 .AboutMe > p {
-    color: black;
-    background-color: #e0e0e0;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
+  color: black;
+  background-color: #e0e0e0;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 /* Styling Contact Section */
 .Contact {
-    background-color: #e0e0e0;
-    margin: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 1px;
-    padding-top: 85px;
-    margin-top: 0px;
-    background-clip:content-box;
+  background-color: #e0e0e0;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 1px;
+  padding-top: 85px;
+  margin-top: 0px;
+  background-clip:content-box;
 }
 
 .Contact > h2 {
-    text-align: center;
-    background-color: #303438;
-    color: #e0e0e0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 30px;
+  text-align: center;
+  background-color: #303438;
+  color: #e0e0e0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
 }
 
 .Contact > p {
-    color: black;
-    background-color: #e0e0e0;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    font-size: 12px;
+  color: black;
+  background-color: #e0e0e0;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: 12px;
 }
 
 /* media query to alter the contents of the Contact section */
 @media (min-width: 768px) {
-    .Contact > p {
-        color: black;
-        background-color: #e0e0e0;
-        padding: 0px;
-        margin: 0px;
-        text-align: center;
-        font-size: 20px;
-    }
+  .Contact > p {
+      color: black;
+      background-color: #e0e0e0;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      font-size: 20px;
+  }
 }
 
 /* Styling Assignments Section */
 .Assignments {
-    background-color: #e0e0e0;
-    margin: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 85px;
-    padding-top: 85px;
-    margin-top: 0px;
-    background-clip:content-box;
+  background-color: #e0e0e0;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 85px;
+  padding-top: 85px;
+  margin-top: 0px;
+  background-clip:content-box;
 }
 
 .Assignments > h2 {
-    text-align: center;
-    background-color: #303438;
-    color: #e0e0e0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 30px;
+  text-align: center;
+  background-color: #303438;
+  color: #e0e0e0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
 }
 
 .Assignments > p {
-    color: black;
-    background-color: #e0e0e0;
-    padding: 0px;
-    padding-top: 25px;
-    margin: 0px;
-    text-align: center;
+  color: black;
+  background-color: #e0e0e0;
+  padding: 0px;
+  padding-top: 25px;
+  margin: 0px;
+  text-align: center;
 }
 
 
 .Assignments > ul {
-    color: black;
-    background-color: #e0e0e0;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    padding-bottom:300px;
+  color: black;
+  background-color: #e0e0e0;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  padding-bottom:300px;
 }
 
 /* Creating containers for HW folder images/links/captions */
 .container {
-    display:inline-block;
-    padding-right:25px;
+  display:inline-block;
+  padding-right:25px;
+  background-color: #e0e0e0;
+  margin:0px;
+}
+
+/* Setting opacity of null link image */
+.imageOpacity {
+  opacity: 0.5;
+}
+
+/* Styling captions of HW assignment images */
+.caption {
+  display: block;
+  width: 100%;
+  text-align: center;
+  list-style:none;
+  color:black;
+  background-color: #e0e0e0;
+  margin:0px;
+}
+
+#test p {
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -o-animation: fadein 4s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Setting opacity of null link image */
+.imageOpacity {
+    opacity: 0.5;
+}
+
+/* Styling captions of HW assignment images */
+.caption {
+    display: block;
+    width: 100%;
+    text-align: center;
+    list-style:none;
+    color:black;
     background-color: #e0e0e0;
     margin:0px;
 }
@@ -379,4 +462,37 @@ h4 {
     color:black;
     background-color: #e0e0e0;
     margin:0px;
+}
+
+/* Setting opacity of null link image */
+.imageOpacity {
+    opacity: 0.5;
+}
+
+/* Styling captions of HW assignment images */
+.caption {
+    display: block;
+    width: 100%;
+    text-align: center;
+    list-style:none;
+    color:black;
+    background-color: #e0e0e0;
+    margin:0px;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #303438!important;
+  transition: background-color 400ms linear;
+}
+
+.navbar-fixed-top.scrolled .nav-link {
+  color:#e0e0e0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-bottom: 15px;
 }
